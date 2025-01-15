@@ -1,0 +1,25 @@
+import torch
+from torch.utils.data import DataLoader
+from model import SVTRCompact
+from dataset import TextDataset  # Assume a custom dataset class is defined
+
+# Load the trained model
+model = SVTRCompact(num_classes=100)
+model.load_state_dict(torch.load("svtr_compact.pth"))
+model.eval()
+
+# Test Dataset and DataLoader
+test_dataset = TextDataset(root="path/to/test_data")
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
+# Evaluation
+correct = 0
+total = 0
+with torch.no_grad():
+    for images, labels in test_loader:
+        outputs = model(images)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+print(f"Accuracy on test set: {100 * correct / total:.2f}%")

@@ -2,7 +2,7 @@
 
 Welcome to the official repository for **Efficient-SVTR**, a lightweight and efficient framework designed for **Scene Text Recognition (STR)**. This repository hosts the implementation of **SVTR-Compact**, a novel approach that enhances the baseline SVTR model through two key innovations: the **Jumble Module** and the **Self-Distillation Module**. Our work achieves **state-of-the-art performance** on benchmark datasets while maintaining computational efficiency, making it ideal for deployment in resource-constrained environments.
 
-This work is currently under submission to **Springer Nature's *The Visual Computer***, a prestigious journal for computer vision and graphics research. We are excited to share our **code**, **pre-trained models**, and **evaluation protocols** to support reproducibility and foster further advancements in the field of STR.
+This work is currently under submission to ***The Visual Computer***, a prestigious journal for computer vision and graphics research. We are excited to share our **code**, **pre-trained models**, and **evaluation protocols** to support reproducibility and foster further advancements in the field of STR.
 
 ---
 
